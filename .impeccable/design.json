@@ -1,0 +1,546 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-06T21:20:17.796878+00:00",
+  "title": "Design System: Agua Siembra",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Petróleo Profundo",
+        "canonical": "oklch(25.4% 0.040 229.7)",
+        "tonalRamp": [
+          "#000D15",
+          "#122731",
+          "#2B434F",
+          "#47626F",
+          "#698593",
+          "#8EA9B7",
+          "#B5CFDC",
+          "#DDF3FE"
+        ]
+      },
+      "petrol": {
+        "role": "primary",
+        "displayName": "Petróleo",
+        "canonical": "oklch(37.0% 0.043 221.7)",
+        "tonalRamp": [
+          "#000E15",
+          "#0E2830",
+          "#28444E",
+          "#43636E",
+          "#658692",
+          "#8BABB6",
+          "#B2D0DB",
+          "#D8F4FE"
+        ]
+      },
+      "rock": {
+        "role": "secondary",
+        "displayName": "Roca",
+        "canonical": "oklch(55.3% 0.053 211.0)",
+        "tonalRamp": [
+          "#000F13",
+          "#022930",
+          "#1D464E",
+          "#39666E",
+          "#5B8992",
+          "#82ADB6",
+          "#ABD3DB",
+          "#D1F6FE"
+        ]
+      },
+      "sky": {
+        "role": "secondary",
+        "displayName": "Cielo de Niebla",
+        "canonical": "oklch(70.8% 0.044 207.6)",
+        "tonalRamp": [
+          "#000F12",
+          "#0A292D",
+          "#25464A",
+          "#40656A",
+          "#62888D",
+          "#88ACB1",
+          "#B0D2D7",
+          "#D6F5FA"
+        ]
+      },
+      "clay": {
+        "role": "secondary",
+        "displayName": "Terracota",
+        "canonical": "oklch(61.4% 0.106 43.5)",
+        "tonalRamp": [
+          "#1F0000",
+          "#411300",
+          "#672B0F",
+          "#8C482A",
+          "#B36B4C",
+          "#D79174",
+          "#FCB99D",
+          "#FEEAE1"
+        ]
+      },
+      "clay-ink": {
+        "role": "secondary",
+        "displayName": "Terracota Oscura",
+        "canonical": "oklch(49.7% 0.094 43.4)",
+        "tonalRamp": [
+          "#1F0000",
+          "#411300",
+          "#632F17",
+          "#874B32",
+          "#AE6E53",
+          "#D2947A",
+          "#F7BBA2",
+          "#FEEAE1"
+        ]
+      },
+      "mustard": {
+        "role": "secondary",
+        "displayName": "Mostaza",
+        "canonical": "oklch(78.3% 0.123 85.3)",
+        "tonalRamp": [
+          "#140900",
+          "#302100",
+          "#513C06",
+          "#765908",
+          "#A07A0F",
+          "#C49F4C",
+          "#E9C67B",
+          "#FEEDC9"
+        ]
+      },
+      "lichen": {
+        "role": "tertiary",
+        "displayName": "Liquen",
+        "canonical": "oklch(84.6% 0.073 123.2)",
+        "tonalRamp": [
+          "#070E00",
+          "#1E2802",
+          "#39451C",
+          "#566436",
+          "#788857",
+          "#9CAC7E",
+          "#C3D2A6",
+          "#E7F5CC"
+        ]
+      },
+      "sage": {
+        "role": "tertiary",
+        "displayName": "Salvia",
+        "canonical": "oklch(74.7% 0.069 144.8)",
+        "tonalRamp": [
+          "#001000",
+          "#102B11",
+          "#2A482B",
+          "#456846",
+          "#678B67",
+          "#8DAF8D",
+          "#B4D5B4",
+          "#DAF9D9"
+        ]
+      },
+      "moss": {
+        "role": "tertiary",
+        "displayName": "Musgo",
+        "canonical": "oklch(57.0% 0.061 163.0)",
+        "tonalRamp": [
+          "#001006",
+          "#062B1D",
+          "#214937",
+          "#3D6854",
+          "#5F8C76",
+          "#86B09B",
+          "#AED5C1",
+          "#D4F9E6"
+        ]
+      },
+      "moss-2": {
+        "role": "tertiary",
+        "displayName": "Musgo Hondo",
+        "canonical": "oklch(48.7% 0.043 155.3)",
+        "tonalRamp": [
+          "#010F06",
+          "#15291C",
+          "#2F4637",
+          "#4B6554",
+          "#6D8876",
+          "#92AC9A",
+          "#B9D2C1",
+          "#DEF5E5"
+        ]
+      },
+      "forest": {
+        "role": "tertiary",
+        "displayName": "Bosque Nocturno",
+        "canonical": "oklch(24.5% 0.035 148.9)",
+        "tonalRamp": [
+          "#040E06",
+          "#1A281C",
+          "#344537",
+          "#516353",
+          "#738675",
+          "#98AA9A",
+          "#BED0C0",
+          "#E3F4E5"
+        ]
+      },
+      "sprout": {
+        "role": "tertiary",
+        "displayName": "Verde Siembra",
+        "canonical": "oklch(66.9% 0.195 140.4)",
+        "tonalRamp": [
+          "#001100",
+          "#052D00",
+          "#154D06",
+          "#1F7108",
+          "#2E990E",
+          "#60BE4D",
+          "#8EE47D",
+          "#CFFEC6"
+        ]
+      },
+      "sand": {
+        "role": "neutral",
+        "displayName": "Arena",
+        "canonical": "oklch(93.3% 0.015 80.7)",
+        "tonalRamp": [
+          "#0E0B06",
+          "#27231D",
+          "#433F38",
+          "#625D55",
+          "#857F77",
+          "#A9A49B",
+          "#CFCAC2",
+          "#F2EEE6"
+        ]
+      },
+      "sand-2": {
+        "role": "neutral",
+        "displayName": "Arena 2",
+        "canonical": "oklch(89.7% 0.022 83.3)",
+        "tonalRamp": [
+          "#0F0B04",
+          "#28231A",
+          "#453F34",
+          "#635D50",
+          "#867F72",
+          "#ABA497",
+          "#D0CABE",
+          "#F4EEE2"
+        ]
+      },
+      "sand-3": {
+        "role": "neutral",
+        "displayName": "Arena 3",
+        "canonical": "oklch(84.8% 0.028 83.5)",
+        "tonalRamp": [
+          "#0F0A03",
+          "#292317",
+          "#463F31",
+          "#655D4D",
+          "#887F6E",
+          "#ACA493",
+          "#D2CABA",
+          "#F5EEDF"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel",
+        "canonical": "oklch(95.4% 0.012 79.8)",
+        "tonalRamp": [
+          "#0D0B07",
+          "#27241F",
+          "#433F3A",
+          "#615D57",
+          "#848079",
+          "#A8A49D",
+          "#CECAC3",
+          "#F2EEE8"
+        ]
+      },
+      "paper-field": {
+        "role": "neutral",
+        "displayName": "Papel de Campo",
+        "canonical": "oklch(96.5% 0.010 81.8)",
+        "tonalRamp": [
+          "#0D0B08",
+          "#26241F",
+          "#423F3A",
+          "#605D57",
+          "#83807A",
+          "#A7A49E",
+          "#CDCAC4",
+          "#F1EEE9"
+        ]
+      },
+      "legal-ink": {
+        "role": "neutral",
+        "displayName": "Tinta Legal",
+        "canonical": "oklch(47.1% 0.028 220.2)",
+        "tonalRamp": [
+          "#020D11",
+          "#17272C",
+          "#314349",
+          "#4D6168",
+          "#6F848C",
+          "#94A9B0",
+          "#BBCED5",
+          "#E0F2F8"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Línea",
+        "canonical": "rgba(10, 38, 50, .22)",
+        "tonalRamp": []
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Línea Fuerte",
+        "canonical": "rgba(10, 38, 50, .55)",
+        "tonalRamp": []
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Titular del hero, uno por página."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Títulos de sección y de la leyenda del corte."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Paneles de la leyenda, pasos del flujo, títulos dentro de láminas."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Bajada bajo titulares, máximo 34em."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Texto corrido, máximo 62ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Etiquetas, valores, navegación y botones en Bebas."
+      },
+      "legal": {
+        "displayName": "Legal",
+        "purpose": "Pies de lámina, avisos de propuesta y copyright."
+      }
+    },
+    "shadows": [
+      {
+        "name": "marker",
+        "value": "0 1px 0 rgba(10,38,50,.15), 0 8px 18px -10px rgba(10,38,50,.45)",
+        "purpose": "Botones de levantamiento."
+      },
+      {
+        "name": "legend-float",
+        "value": "0 1px 0 rgba(10,38,50,.22), 0 30px 60px -32px rgba(10,38,50,.55)",
+        "purpose": "Leyenda flotante sobre el corte."
+      },
+      {
+        "name": "strata-column",
+        "value": "0 1px 0 rgba(10,38,50,.22), 0 40px 80px -50px rgba(10,38,50,.6)",
+        "purpose": "Columna de planes."
+      },
+      {
+        "name": "field-focus",
+        "value": "0 0 0 4px rgba(10,38,50,.1)",
+        "purpose": "Anillo suave al enfocar un campo."
+      },
+      {
+        "name": "header-solid",
+        "value": "0 1px 0 rgba(10,38,50,.22)",
+        "purpose": "Encabezado fijo sólido, con blur de 8 px."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Curva única de transiciones y revelados."
+      },
+      {
+        "name": "reveal",
+        "value": "opacity + translateY(18px), 0.9s ease-out, retardo escalonado",
+        "purpose": "Entrada de bloques al hacer scroll (IntersectionObserver)."
+      },
+      {
+        "name": "tree-grow",
+        "value": "scaleY(0) a 1 desde la base, 1.1s ease-out",
+        "purpose": "Árboles del bosque y de la cuenta."
+      },
+      {
+        "name": "drop-descent",
+        "value": "5.5s cubic-bezier(.45, 0, .55, 1) infinite",
+        "purpose": "Gota del altímetro del hero."
+      },
+      {
+        "name": "step-in",
+        "value": "opacity + translateY(10px), 0.55s ease-out",
+        "purpose": "Cambio de paso en el flujo de suscripción."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "560px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "nav",
+        "value": "900px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "shelf",
+        "value": "1100px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón primario (marcador)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción principal sobre arena: píldora tinta con punto de pin.",
+      "html": "<button class=\"ds-btn\"><span class=\"ds-pin\"></span>Arma tu plan</button>",
+      "css": ":host{--ink:#0A2632;--petrol:#244550;--sky:#81A9AF;--sand:#EEE8DE;--sand-2:#E4DCCD;--sand-3:#D6CCB9;--clay:#B96E4E;--clay-ink:#8E4F34;--mustard:#DCB253;--lichen:#C3D5A0;--sage:#92B992;--moss-2:#4C6755;--forest:#142517;--sprout:#43B02A;--line:rgba(10,38,50,.22);--line-strong:rgba(10,38,50,.55);--ease-out:cubic-bezier(.16,1,.3,1);--display:\"Bebas Neue\",\"Arial Narrow\",sans-serif;--text:\"Archivo\",\"Arial Narrow\",sans-serif;} .ds-btn{display:inline-flex;align-items:center;gap:.7em;min-height:3.25rem;padding:0 1.5rem 0 1.35rem;background:var(--ink);color:var(--sand);font-family:var(--display);font-size:1.3rem;letter-spacing:.05em;line-height:1;border:0;border-radius:999px;cursor:pointer;transition:background-color .25s var(--ease-out),transform .25s var(--ease-out);box-shadow:0 1px 0 rgba(10,38,50,.15),0 8px 18px -10px rgba(10,38,50,.45)} .ds-btn .ds-pin{width:.6em;height:.6em;border-radius:50%;background:currentColor;box-shadow:0 0 0 .22em color-mix(in srgb,currentColor 30%,transparent)} .ds-btn:hover{background:var(--petrol);transform:translateY(-1px)} .ds-btn:active{transform:translateY(1px)} .ds-btn:focus-visible{outline:2px solid var(--clay);outline-offset:3px}"
+    },
+    {
+      "name": "Botón arena",
+      "kind": "button",
+      "refersTo": "button-sand",
+      "description": "Acción principal sobre fotografía o lámina petróleo.",
+      "html": "<div class=\"ds-dark\"><button class=\"ds-btn ds-btn--sand\"><span class=\"ds-pin\"></span>Arma tu plan</button></div>",
+      "css": ":host{--ink:#0A2632;--petrol:#244550;--sky:#81A9AF;--sand:#EEE8DE;--sand-2:#E4DCCD;--sand-3:#D6CCB9;--clay:#B96E4E;--clay-ink:#8E4F34;--mustard:#DCB253;--lichen:#C3D5A0;--sage:#92B992;--moss-2:#4C6755;--forest:#142517;--sprout:#43B02A;--line:rgba(10,38,50,.22);--line-strong:rgba(10,38,50,.55);--ease-out:cubic-bezier(.16,1,.3,1);--display:\"Bebas Neue\",\"Arial Narrow\",sans-serif;--text:\"Archivo\",\"Arial Narrow\",sans-serif;} .ds-btn{display:inline-flex;align-items:center;gap:.7em;min-height:3.25rem;padding:0 1.5rem 0 1.35rem;background:var(--ink);color:var(--sand);font-family:var(--display);font-size:1.3rem;letter-spacing:.05em;line-height:1;border:0;border-radius:999px;cursor:pointer;transition:background-color .25s var(--ease-out),transform .25s var(--ease-out);box-shadow:0 1px 0 rgba(10,38,50,.15),0 8px 18px -10px rgba(10,38,50,.45)} .ds-btn .ds-pin{width:.6em;height:.6em;border-radius:50%;background:currentColor;box-shadow:0 0 0 .22em color-mix(in srgb,currentColor 30%,transparent)} .ds-btn:hover{background:var(--petrol);transform:translateY(-1px)} .ds-btn:active{transform:translateY(1px)} .ds-btn:focus-visible{outline:2px solid var(--clay);outline-offset:3px} .ds-dark{background:var(--ink);padding:24px} .ds-btn--sand{background:var(--sand);color:var(--ink)} .ds-btn--sand:hover{background:#F7F3EC} .ds-dark .ds-btn:focus-visible{outline-color:var(--mustard)}"
+    },
+    {
+      "name": "Botón fantasma",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Acción secundaria sobre bandas petróleo: borde interior de 1.5 px.",
+      "html": "<div class=\"ds-dark\"><button class=\"ds-ghost\">Calcular para mi restaurante</button></div>",
+      "css": ":host{--ink:#0A2632;--petrol:#244550;--sky:#81A9AF;--sand:#EEE8DE;--sand-2:#E4DCCD;--sand-3:#D6CCB9;--clay:#B96E4E;--clay-ink:#8E4F34;--mustard:#DCB253;--lichen:#C3D5A0;--sage:#92B992;--moss-2:#4C6755;--forest:#142517;--sprout:#43B02A;--line:rgba(10,38,50,.22);--line-strong:rgba(10,38,50,.55);--ease-out:cubic-bezier(.16,1,.3,1);--display:\"Bebas Neue\",\"Arial Narrow\",sans-serif;--text:\"Archivo\",\"Arial Narrow\",sans-serif;}  .ds-dark{background:var(--petrol);color:var(--sand);padding:24px} .ds-ghost{display:inline-flex;align-items:center;min-height:3.25rem;padding:0 1.5rem;background:transparent;color:currentColor;font-family:var(--display);font-size:1.3rem;letter-spacing:.05em;border:0;border-radius:999px;box-shadow:inset 0 0 0 1.5px currentColor;cursor:pointer;transition:background-color .25s var(--ease-out)} .ds-ghost:hover{background:color-mix(in srgb,currentColor 10%,transparent)} .ds-ghost:focus-visible{outline:2px solid var(--mustard);outline-offset:3px}"
+    },
+    {
+      "name": "Campo de texto",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Campo y select sobre arena, con etiqueta en Bebas.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-label\">Correo</span><input class=\"ds-input\" placeholder=\"tu@correo.com\"></label>",
+      "css": ":host{--ink:#0A2632;--petrol:#244550;--sky:#81A9AF;--sand:#EEE8DE;--sand-2:#E4DCCD;--sand-3:#D6CCB9;--clay:#B96E4E;--clay-ink:#8E4F34;--mustard:#DCB253;--lichen:#C3D5A0;--sage:#92B992;--moss-2:#4C6755;--forest:#142517;--sprout:#43B02A;--line:rgba(10,38,50,.22);--line-strong:rgba(10,38,50,.55);--ease-out:cubic-bezier(.16,1,.3,1);--display:\"Bebas Neue\",\"Arial Narrow\",sans-serif;--text:\"Archivo\",\"Arial Narrow\",sans-serif;}  .ds-field{display:grid;gap:.4rem;font-family:var(--text);background:var(--sand);padding:16px} .ds-label{font-family:var(--display);font-size:1.05rem;letter-spacing:.06em;color:var(--petrol)} .ds-input{height:3.2rem;padding:0 1rem;border-radius:10px;background:#F7F3EC;border:1.5px solid var(--line);color:var(--ink);font:inherit;transition:border-color .2s,box-shadow .2s} .ds-input::placeholder{color:#5f7279} .ds-input:hover{border-color:var(--line-strong)} .ds-input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 4px rgba(10,38,50,.1)}"
+    },
+    {
+      "name": "Control segmentado",
+      "kind": "chip",
+      "refersTo": "segmented",
+      "description": "Elección exclusiva corta (frecuencia, tipo de cliente).",
+      "html": "<div class=\"ds-seg\"><button aria-pressed=\"true\">Semanal</button><button aria-pressed=\"false\">Quincenal</button><button aria-pressed=\"false\">Mensual</button></div>",
+      "css": ":host{--ink:#0A2632;--petrol:#244550;--sky:#81A9AF;--sand:#EEE8DE;--sand-2:#E4DCCD;--sand-3:#D6CCB9;--clay:#B96E4E;--clay-ink:#8E4F34;--mustard:#DCB253;--lichen:#C3D5A0;--sage:#92B992;--moss-2:#4C6755;--forest:#142517;--sprout:#43B02A;--line:rgba(10,38,50,.22);--line-strong:rgba(10,38,50,.55);--ease-out:cubic-bezier(.16,1,.3,1);--display:\"Bebas Neue\",\"Arial Narrow\",sans-serif;--text:\"Archivo\",\"Arial Narrow\",sans-serif;}  .ds-seg{display:inline-grid;grid-auto-flow:column;grid-auto-columns:1fr;background:var(--sand-2);border-radius:999px;padding:4px;gap:2px} .ds-seg button{border:0;background:transparent;padding:.65rem 1.1rem;border-radius:999px;cursor:pointer;font-family:var(--display);font-size:1.15rem;letter-spacing:.05em;color:var(--petrol);transition:background-color .2s,color .2s} .ds-seg button[aria-pressed=true]{background:var(--ink);color:var(--sand)} .ds-seg button:hover:not([aria-pressed=true]){background:var(--sand-3)} .ds-seg button:focus-visible{outline:2px solid var(--clay);outline-offset:3px}"
+    },
+    {
+      "name": "Chips",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Etiquetas de estado; el verde solo para impacto.",
+      "html": "<div class=\"ds-row\"><span class=\"ds-chip\">Martes</span><span class=\"ds-chip ds-chip--sprout\">13 árboles</span><span class=\"ds-chip ds-chip--warn\">Pausada</span></div>",
+      "css": ":host{--ink:#0A2632;--petrol:#244550;--sky:#81A9AF;--sand:#EEE8DE;--sand-2:#E4DCCD;--sand-3:#D6CCB9;--clay:#B96E4E;--clay-ink:#8E4F34;--mustard:#DCB253;--lichen:#C3D5A0;--sage:#92B992;--moss-2:#4C6755;--forest:#142517;--sprout:#43B02A;--line:rgba(10,38,50,.22);--line-strong:rgba(10,38,50,.55);--ease-out:cubic-bezier(.16,1,.3,1);--display:\"Bebas Neue\",\"Arial Narrow\",sans-serif;--text:\"Archivo\",\"Arial Narrow\",sans-serif;}  .ds-row{display:flex;gap:8px;background:var(--sand);padding:16px} .ds-chip{display:inline-flex;align-items:center;font-family:var(--display);font-size:1rem;letter-spacing:.05em;padding:.3rem .65rem .2rem;border-radius:999px;background:var(--sand-2);color:var(--petrol)} .ds-chip--sprout{background:var(--sprout);color:var(--forest)} .ds-chip--warn{background:var(--mustard);color:var(--ink)}"
+    },
+    {
+      "name": "Navegación",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Encabezado sólido sobre arena; subrayado que crece desde la izquierda.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" aria-current=\"page\">Nuestra agua</a><a href=\"#\">Impacto</a><a href=\"#\">Tienda</a></nav>",
+      "css": ":host{--ink:#0A2632;--petrol:#244550;--sky:#81A9AF;--sand:#EEE8DE;--sand-2:#E4DCCD;--sand-3:#D6CCB9;--clay:#B96E4E;--clay-ink:#8E4F34;--mustard:#DCB253;--lichen:#C3D5A0;--sage:#92B992;--moss-2:#4C6755;--forest:#142517;--sprout:#43B02A;--line:rgba(10,38,50,.22);--line-strong:rgba(10,38,50,.55);--ease-out:cubic-bezier(.16,1,.3,1);--display:\"Bebas Neue\",\"Arial Narrow\",sans-serif;--text:\"Archivo\",\"Arial Narrow\",sans-serif;}  .ds-nav{display:flex;gap:28px;padding:18px 24px;background:rgba(238,232,222,.94);box-shadow:0 1px 0 var(--line);color:var(--ink)} .ds-nav a{font-family:var(--display);font-size:1.2rem;letter-spacing:.06em;text-decoration:none;color:inherit;padding:.4rem .1rem;position:relative} .ds-nav a::after{content:\"\";position:absolute;left:0;right:0;bottom:.1rem;height:1.5px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease-out)} .ds-nav a:hover::after,.ds-nav a[aria-current]::after{transform:scaleX(1)} .ds-nav a:focus-visible{outline:2px solid var(--clay);outline-offset:3px}"
+    },
+    {
+      "name": "Lámina petróleo",
+      "kind": "card",
+      "refersTo": "ink-plate",
+      "description": "Zona operativa invertida: calculadora, ficha, total.",
+      "html": "<div class=\"ds-plate\"><div class=\"ds-big\">$214.500</div><div class=\"ds-r\"><span>Por botellón</span><b>$19.500</b></div><div class=\"ds-r\"><span>Árboles al año</span><b class=\"ds-g\">13</b></div></div>",
+      "css": ":host{--ink:#0A2632;--petrol:#244550;--sky:#81A9AF;--sand:#EEE8DE;--sand-2:#E4DCCD;--sand-3:#D6CCB9;--clay:#B96E4E;--clay-ink:#8E4F34;--mustard:#DCB253;--lichen:#C3D5A0;--sage:#92B992;--moss-2:#4C6755;--forest:#142517;--sprout:#43B02A;--line:rgba(10,38,50,.22);--line-strong:rgba(10,38,50,.55);--ease-out:cubic-bezier(.16,1,.3,1);--display:\"Bebas Neue\",\"Arial Narrow\",sans-serif;--text:\"Archivo\",\"Arial Narrow\",sans-serif;}  .ds-plate{background:var(--ink);color:var(--sand);border-radius:22px;padding:clamp(1.25rem,3vw,2.25rem);font-family:var(--text);max-width:420px} .ds-big{font-family:var(--display);font-size:3.4rem;line-height:.85;font-variant-numeric:tabular-nums;margin-bottom:12px} .ds-r{display:flex;justify-content:space-between;align-items:baseline;padding:.7rem 0;border-top:1px solid rgba(238,232,222,.18);color:var(--sky)} .ds-r b{font-family:var(--display);font-weight:400;font-size:1.4rem;color:var(--sand);font-variant-numeric:tabular-nums} .ds-r b.ds-g{color:var(--sprout)}"
+    },
+    {
+      "name": "Columna de estratos",
+      "kind": "custom",
+      "refersTo": "stratum",
+      "description": "Planes apilados como estratos, más gruesos al bajar.",
+      "html": "<div class=\"ds-strata\"><div class=\"ds-s a\"><b>Semilla</b><span>$23.000</span></div><div class=\"ds-s b\"><b>Raíz</b><span>$21.500</span></div><div class=\"ds-s c\"><b>Cauce</b><span>$20.500</span></div><div class=\"ds-s d\"><b>Bosque</b><span>$19.500</span></div></div>",
+      "css": ":host{--ink:#0A2632;--petrol:#244550;--sky:#81A9AF;--sand:#EEE8DE;--sand-2:#E4DCCD;--sand-3:#D6CCB9;--clay:#B96E4E;--clay-ink:#8E4F34;--mustard:#DCB253;--lichen:#C3D5A0;--sage:#92B992;--moss-2:#4C6755;--forest:#142517;--sprout:#43B02A;--line:rgba(10,38,50,.22);--line-strong:rgba(10,38,50,.55);--ease-out:cubic-bezier(.16,1,.3,1);--display:\"Bebas Neue\",\"Arial Narrow\",sans-serif;--text:\"Archivo\",\"Arial Narrow\",sans-serif;}  .ds-strata{border-radius:22px;overflow:hidden;box-shadow:0 1px 0 var(--line),0 40px 80px -50px rgba(10,38,50,.6)} .ds-s{display:flex;justify-content:space-between;align-items:center;padding:0 1.5rem;font-family:var(--display);font-variant-numeric:tabular-nums;transition:filter .3s} .ds-s:hover{filter:brightness(1.06)} .ds-s b{font-weight:400;font-size:2.4rem;line-height:.9} .ds-s span{font-size:1.9rem} .a{min-height:4rem;background:var(--lichen);color:var(--ink)} .b{min-height:5rem;background:var(--sage);color:var(--ink)} .c{min-height:6rem;background:var(--moss-2);color:var(--sand)} .d{min-height:7rem;background:var(--ink);color:var(--sand)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "La lámina del corte del páramo",
+    "overview": "El sitio es una lámina de levantamiento: un corte geológico del páramo de Guasca que el visitante recorre hacia abajo (lluvia, frailejones, suelo esponja, roca, manantial, camión, cocina) y que, leído hacia arriba, es el bosque que su suscripción siembra. Todo el sistema sale de ese material: fondo arena como papel de plano, petróleo como tinta, bandas de estrato en salvias y musgos, cotas de altitud, líneas guía finas, números de lámina y leyendas. Los controles son marcadores de levantamiento: píldoras con un punto de pin, escalones de nivel, puntos de ruta.\n\nLa densidad es de lámina técnica, no de folleto: mucho aire de arena, información anclada a líneas finas y cifras grandes en Bebas que se leen como cotas. La fotografía es paisaje real de páramo colombiano y vegetación nativa (frailejones, laguna, vivero); el producto aparece recortado, apoyado sobre una línea de suelo. El movimiento es descenso vertical lento con salida suave; las líneas se dibujan, los árboles crecen desde la base, nada rebota.",
+    "keyCharacteristics": [
+      "Arena (#EEE8DE) como papel, petróleo profundo como tinta y como lámina invertida para las zonas operativas.",
+      "Bandas de estrato en lichen, sage, moss-2 e ink, cada una más gruesa cuanto más profunda.",
+      "Bebas Neue en mayúsculas para enunciados, cotas, precios y controles; Archivo condensado para frases; Carlito para notas legales y pies de lámina.",
+      "Líneas guía de 1 a 1.5 px en tinta translúcida como estructura, en lugar de cajas.",
+      "Verde de empaque solo donde se siembra un árbol."
+    ],
+    "rules": [
+      {
+        "name": "The Planted Green Rule",
+        "body": "El verde siembra aparece solo donde hay un árbol sembrado o contado: chips de impacto, conteos, medallas, el final de la ruta. Nunca en botones de compra genéricos ni en decoración.",
+        "section": "colors"
+      },
+      {
+        "name": "The Stratum Order Rule",
+        "body": "Cuando los niveles se apilan, el orden es lichen, sage, moss-2, ink de arriba abajo, y cada banda es más gruesa que la anterior. Más profundo significa más consumo y menor precio unitario.",
+        "section": "colors"
+      },
+      {
+        "name": "The Readable Clay Rule",
+        "body": "La terracota base es material del corte y anillo de foco; cuando la terracota lleva texto sobre arena se usa clay-ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cota Rule",
+        "body": "Toda cifra que se compara o cambia (precio, altitud, cantidad, total) va en Bebas con números tabulares. Las frases nunca van en Bebas; los enunciados cortos sí.",
+        "section": "typography"
+      },
+      {
+        "name": "The Plate Caption Rule",
+        "body": "La identificación de una lámina va debajo de ella, en Carlito, como pie de plano. Nunca arriba del título como antetítulo.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hairline Before Shadow Rule",
+        "body": "Una superficie se separa primero con una línea de 1 px y un cambio de tono; la sombra larga y suave se reserva para lo que flota sobre otra escena.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** usar arena (#EEE8DE) como fondo y petróleo profundo (#0A2632) como tinta y como lámina invertida de las zonas operativas.",
+      "**Do** apilar niveles en el orden lichen, sage, moss-2, ink, con bandas más gruesas al bajar.",
+      "**Do** poner cifras, cotas y precios en Bebas con números tabulares, y frases en Archivo condensado (wdth 85 a 88).",
+      "**Do** estructurar con hairlines de 1 a 1.5 px en rgba(10, 38, 50, .22) o .55 antes que con cajas.",
+      "**Do** animar con la curva cubic-bezier(.16, 1, .3, 1): revelados de 18 px en 0.9 s, árboles que crecen desde la base, y respetar prefers-reduced-motion.",
+      "**Do** etiquetar los precios de propuesta como propuesta, en Carlito, debajo de la lámina que los muestra."
+    ],
+    "donts": [
+      "**Don't** usar el verde siembra (#43B02A) fuera de lo que cuenta o planta árboles.",
+      "**Don't** poner texto en la terracota base sobre arena; usar clay-ink (#8E4F34).",
+      "**Don't** usar rebotes, resortes ni sombras negras duras o desplazadas.",
+      "**Don't** escribir frases largas en Bebas ni usar Bebas en minúsculas.",
+      "**Don't** colocar antetítulos sobre los títulos; el número de lámina va como pie.",
+      "**Don't** usar fotografía de pinos o eucaliptos; el paisaje es páramo colombiano y vegetación nativa.",
+      "**Don't** alterar el logo del brand book; se aplica como máscara en el color actual."
+    ]
+  }
+}
