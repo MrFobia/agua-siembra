@@ -9,7 +9,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Bebas+Neue&family=Carlito:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>tailwind.config = { corePlugins: { preflight: false } };</script>
 <style>
 *, *::before, *::after { box-sizing: border-box; }
@@ -361,6 +363,10 @@ body { background: var(--sand); }
           <div class="grid md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] gap-4 mt-6">
             <div class="field"><label class="label" for="dir">Dirección</label><input class="input" id="dir" autocomplete="street-address" placeholder="Calle 107 # 7-20"><p class="err hidden" id="dir-err">Escribe la dirección completa para saber dónde dejar los botellones.</p></div>
             <div class="field"><label class="label" for="dir2">Apto, casa o indicaciones</label><input class="input" id="dir2" placeholder="Torre 2, apto 501 (opcional)"></div>
+          </div>
+          <div class="mt-5 hidden" id="map-wrap">
+            <div id="map" role="img" aria-label="Mapa con el pin de tu dirección" style="height:260px;border-radius:14px;border:1px solid var(--line);overflow:hidden"></div>
+            <p class="mt-2 text-[.88rem] muted" id="map-note">Arrastra el pin si no queda justo en tu puerta.</p>
           </div>
           <div class="mt-6" id="cov-out" aria-live="polite"></div>
         </section>
@@ -718,6 +724,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   $("#dir").addEventListener("input", function (e) { s.dir = e.target.value; $("#dir").removeAttribute("aria-invalid"); $("#dir-err").classList.add("hidden"); renderAside(); });
+  var map = null, pin = null, geoTimer = 0, geoSeq = 0;
+  function showPin(lat, lon) {
+    if (typeof L === "undefined") return;
+    $("#map-wrap").classList.remove("hidden");
+    if (!map) {
+      map = L.map("map", { scrollWheelZoom: false }).setView([lat, lon], 17);
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "&copy; OpenStreetMap" }).addTo(map);
+      pin = L.marker([lat, lon], { draggable: true }).addTo(map);
+    } else { pin.setLatLng([lat, lon]); map.setView([lat, lon], 17); }
+    map.invalidateSize();
+  }
+  function geocode() {
+    var q = (s.dir || "").trim(), seq = ++geoSeq;
+    if (q.length < 6) { $("#map-wrap").classList.add("hidden"); return; }
+    fetch("https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=co&viewbox=-74.3,4.9,-73.9,4.4&q=" + encodeURIComponent(q + ", Bogotá, Colombia"))
+      .then(function (r) { return r.json(); })
+      .then(function (r) { if (seq !== geoSeq) return; if (r && r[0]) showPin(+r[0].lat, +r[0].lon); else $("#map-wrap").classList.add("hidden"); })
+      .catch(function () {});
+  }
+  $("#dir").addEventListener("input", function () { clearTimeout(geoTimer); geoTimer = setTimeout(geocode, 900); });
   $("#dir2").addEventListener("input", function (e) { s.dir2 = e.target.value; });
 
   function renderCoverage() {

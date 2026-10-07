@@ -487,7 +487,12 @@ select.input { appearance: none; padding-right: 2.6rem; background-image: url("d
           <div class="mt-8 flex items-end gap-4">
             <p class="calc__big" id="calc-jugs">11</p>
             <p class="pb-1 leading-tight">botellones de 20 L al mes<br><span class="muted" id="calc-liters">220 litros</span></p>
+            <div class="stepper ml-auto self-center" role="group" aria-label="Botellones al mes">
+              <button type="button" data-jug="-1" aria-label="Un botellón menos"><svg width="14" height="2" viewBox="0 0 14 2"><path d="M0 1h14" stroke="currentColor" stroke-width="2"/></svg></button>
+              <button type="button" data-jug="1" aria-label="Un botellón más"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M0 7h14M7 0v14" stroke="currentColor" stroke-width="2"/></svg></button>
+            </div>
           </div>
+          <p class="mt-2 text-[.88rem] muted hidden" id="calc-sug-line"></p>
           <div class="jugs mt-4" id="calc-jugviz" aria-hidden="true"></div>
           <div class="mt-6">
             <div class="calc__row"><span class="muted">Tu plan</span><span class="label text-[1.4rem]" id="calc-plan">Bosque</span></div>
@@ -946,7 +951,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("#calc [data-tipo]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-tipo") === st.tipo)); });
     document.getElementById("calc-who").textContent = WHO[st.tipo];
     document.getElementById("calc-n").textContent = st.n;
-    var jugs = AS.sugeridos(st.tipo, st.n), pl = AS.plan(jugs), month = jugs * pl.precio, trees = Math.max(1, Math.round(jugs * 12 / AS.POR_ARBOL));
+    var sugJ = AS.sugeridos(st.tipo, st.n), jugs = st.cant || sugJ, pl = AS.plan(jugs), month = jugs * pl.precio, trees = Math.max(1, Math.round(jugs * 12 / AS.POR_ARBOL));
     document.getElementById("calc-jugs").textContent = jugs;
     document.getElementById("calc-liters").textContent = AS.NUM(jugs * AS.LITROS) + " litros";
     document.getElementById("calc-plan").textContent = pl.nombre;
@@ -958,7 +963,10 @@ document.addEventListener("DOMContentLoaded", function () {
     else { for (var j = cur; j < show; j++) viz.insertAdjacentHTML("beforeend", jugSvg); }
     if (jugs > 30 && !viz.querySelector(".more")) viz.insertAdjacentHTML("beforeend", '<span class="more label self-center text-[var(--sky)]">+' + (jugs - 30) + "</span>");
     var more = viz.querySelector(".more"); if (more) { if (jugs > 30) { more.textContent = "+" + (jugs - 30); viz.appendChild(more); } else more.remove(); }
-    document.getElementById("calc-go").href = "suscripcion.html?tipo=" + st.tipo + "&personas=" + st.n;
+    var sl = document.getElementById("calc-sug-line");
+    if (st.cant && st.cant !== sugJ) { sl.classList.remove("hidden"); sl.innerHTML = "Sugerido para tu consumo: " + sugJ + ' · <button type="button" class="underline bg-transparent border-0 p-0 cursor-pointer text-inherit" id="calc-to-sug">volver al sugerido</button>'; document.getElementById("calc-to-sug").addEventListener("click", function () { st.cant = null; renderCalc(); }); }
+    else sl.classList.add("hidden");
+    document.getElementById("calc-go").href = "suscripcion.html?tipo=" + st.tipo + "&personas=" + st.n + (st.cant ? "&n=" + st.cant : "");
     document.querySelectorAll(".stratum").forEach(function (s) { s.setAttribute("data-active", String(s.getAttribute("data-plan") === pl.id)); });
     forestMine.textContent = trees + (trees === 1 ? " árbol" : " árboles");
     mine = trees; paintMine();
@@ -966,10 +974,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   document.querySelectorAll("#calc [data-tipo]").forEach(function (b) { b.addEventListener("click", function () {
     st.tipo = b.getAttribute("data-tipo");
-    st.n = st.tipo === "casa" ? 4 : st.tipo === "oficina" ? 12 : 30; renderCalc(); }); });
+    st.n = st.tipo === "casa" ? 4 : st.tipo === "oficina" ? 12 : 30; st.cant = null; renderCalc(); }); });
   document.querySelectorAll("#calc [data-step]").forEach(function (b) { b.addEventListener("click", function () {
     var step = st.tipo === "casa" ? 1 : st.tipo === "oficina" ? 2 : 5;
-    st.n = Math.min(MAXN[st.tipo], Math.max(1, st.n + step * +b.getAttribute("data-step"))); renderCalc(); }); });
+    st.n = Math.min(MAXN[st.tipo], Math.max(1, st.n + step * +b.getAttribute("data-step"))); st.cant = null; renderCalc(); }); });
+  document.querySelectorAll("#calc [data-jug]").forEach(function (b) { b.addEventListener("click", function () {
+    st.cant = Math.min(60, Math.max(1, (st.cant || AS.sugeridos(st.tipo, st.n)) + +b.getAttribute("data-jug"))); renderCalc(); }); });
 
   /* ---------- Bosque ---------- */
   var forest = document.getElementById("forest");
