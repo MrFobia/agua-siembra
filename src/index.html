@@ -530,7 +530,7 @@ document.addEventListener("DOMContentLoaded", function () {
   for (var pz = 0; pz < 180; pz++) { var px = 8 + (pz * 61) % 1180, py = surfY(px) + 22 + (pz * 13) % 40; pores += '<circle cx="' + px + '" cy="' + py + '" r="' + (1.2 + (pz % 3) * .5) + '"/>'; }
 
   // ruta de la gota
-  var drop = "M272 70C272 120 276 160 279 196C283 214 300 226 290 244C281 262 306 270 312 292C318 318 296 340 318 366C338 390 318 420 344 446C364 470 352 500 372 532C392 556 430 560 520 552C640 541 760 528 884 514C900 520 920 538 950 560C975 578 1000 592 1010 596C1050 616 1100 650 1160 670C1240 676 1360 676 1500 676";
+  var drop = "M272 70C272 120 276 160 279 196C283 214 300 226 290 244C281 262 306 270 312 292C318 318 296 340 318 366C338 390 318 420 344 446C364 470 352 500 372 532C392 556 430 560 520 552C640 541 760 528 884 514C900 520 920 538 950 560C975 578 1000 592 1010 596C1050 616 1100 650 1160 670C1240 676 1340 676 1440 676";
 
   var city = '<g fill="#244550" transform="translate(0 680)">';
   [[1290,-40,30],[1326,-62,22],[1352,-30,34],[1392,-78,26],[1422,-48,30],[1458,-36,26],[1488,-92,24],[1516,-54,32],[1552,-30,34]].forEach(function (b) { city += '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + (-b[1]) + '" rx="1.5"/>'; });
@@ -562,12 +562,11 @@ document.addEventListener("DOMContentLoaded", function () {
     '<path d="' + smooth(SURF) + '" fill="none" stroke="#0A2632" stroke-width="2"/>' +
     '<path d="' + clayTop + '" fill="none" stroke="#0A2632" stroke-width="1" stroke-dasharray="3 5" opacity=".0"/>' +
     frai + plant + city +
-    '<path d="M1160 676H1600" stroke="#0A2632" stroke-width="1" stroke-dasharray="6 6" opacity=".5"/>' +
     '<path id="drop-path" d="' + drop + '" fill="none" stroke="none"/>' +
     '<path id="drop-trail" d="' + drop + '" fill="none" stroke="url(#trail)" stroke-width="5" stroke-linecap="round"/>' +
     '<g id="truck-wrap" transform="translate(1180 674)">' + truck + "</g>" +
     // cotas
-    '<g stroke="#0A2632" stroke-width="1" stroke-dasharray="2 5" opacity=".7"><path d="M884 518H1600"/><path d="M1180 680H1600"/></g>' +
+    '<g stroke="#0A2632" stroke-width="1" stroke-dasharray="2 5" opacity=".7"><path d="M884 518H1600"/></g>' +
     label(1150, 506, "COTA 2.900 M", "start", "#0A2632", 18) + label(1438, 566, "BOGOTÁ · 2.600 M", "middle", "#0A2632", 20) +
     // rótulos
     leader(470, 140, 520, 104) + label(526, 104, "NIEBLA Y LLUVIA HORIZONTAL") +
@@ -629,7 +628,7 @@ document.addEventListener("DOMContentLoaded", function () {
     dropEl.setAttribute("transform", "translate(" + pt.x.toFixed(1) + " " + pt.y.toFixed(1) + ")");
     trail.style.strokeDashoffset = (L - t).toFixed(1);
     var tp = Math.max(0, (t - K[5].t) / (L - K[5].t));
-    truckWrap.setAttribute("transform", "translate(" + (1180 + tp * 300).toFixed(1) + " 674)");
+    truckWrap.setAttribute("transform", "translate(" + (1180 + tp * 210).toFixed(1) + " 674)");
     var alt = Math.max(A_BOT, Math.min(A_TOP, ALT(pt.y)));
     mark.style.top = ((A_TOP - alt) / (A_TOP - A_BOT) * 100) + "%";
     read.style.top = mark.style.top;
