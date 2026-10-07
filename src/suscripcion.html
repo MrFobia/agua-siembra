@@ -110,6 +110,17 @@ body { background: var(--sand); }
 
 /* Panel de cuenta */
 .acct-hero { background: var(--ink); color: var(--sand); border-radius: 24px; padding: clamp(1.4rem, 3.5vw, 2.6rem); position: relative; overflow: hidden; }
+.acct-hero--split { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); padding: 0; }
+.acct-hero__body { padding: clamp(1.4rem, 3.5vw, 2.6rem); position: relative; z-index: 1; }
+.acct-hero__photo { position: relative; min-height: 100%; margin: 0; }
+.acct-hero__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 22%); mask-image: linear-gradient(90deg, transparent 0, #000 22%); }
+@media (max-width: 1023px) {
+  .acct-hero--split { grid-template-columns: 1fr; }
+  .acct-hero__photo { order: -1; min-height: 0; aspect-ratio: 4 / 3; }
+  .acct-hero__photo img { -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent); mask-image: linear-gradient(180deg, #000 70%, transparent); }
+  .acct-hero__photo img { object-position: 50% 12%; }
+}
 .acct-date { font-family: var(--display); font-size: clamp(2.8rem, 6.6vw, 5.4rem); line-height: .86; }
 .chip { display: inline-flex; align-items: center; gap: .45rem; font-family: var(--display); font-size: 1.02rem; letter-spacing: .05em; padding: .32rem .7rem .22rem; border-radius: 999px; background: var(--sand-2); color: var(--petrol); }
 .chip--sprout { background: var(--sprout); color: var(--forest); }
@@ -307,23 +318,22 @@ body { background: var(--sand); }
 
   <!-- ===== Cuenta ===== -->
   <div id="cuenta" class="mx-auto max-w-[1280px] px-4 md:px-8" hidden>
-    <div class="acct-hero">
-      <div class="flex flex-wrap items-center gap-3"><span class="chip chip--sky" id="a-status">Suscripción activa</span><span class="chip" style="background:rgba(238,232,222,.12);color:var(--sand)">Sin permanencia</span></div>
-      <h1 class="display h2 mt-5" id="a-title">Plan Bosque, entrega quincenal</h1>
-      <p class="mt-2 text-[var(--sky)]" id="a-addr"></p>
-      <div class="grid lg:grid-cols-[minmax(0,1fr)_auto] gap-8 mt-10 items-end">
-        <div>
-          <p class="acct-date" id="a-date">Pasamos el martes 13 de octubre</p>
-          <p class="mt-3 max-w-[38rem]" id="a-visit"></p>
-        </div>
-        <div class="flex flex-wrap gap-3">
+    <div class="acct-hero acct-hero--split">
+      <div class="acct-hero__body">
+        <div class="flex flex-wrap items-center gap-3"><span class="chip chip--sky" id="a-status">Suscripción activa</span><span class="chip" style="background:rgba(238,232,222,.12);color:var(--sand)">Sin permanencia</span></div>
+        <h1 class="display h2 mt-5" id="a-title">Plan Bosque, entrega quincenal</h1>
+        <p class="mt-2 text-[var(--sky)]" id="a-addr"></p>
+        <p class="acct-date mt-10" id="a-date">Pasamos el martes 13 de octubre</p>
+        <p class="mt-3 max-w-[34rem]" id="a-visit"></p>
+        <div class="flex flex-wrap gap-3 mt-8">
           <button class="minibtn" type="button" id="a-skip">Saltar esta entrega</button>
           <button class="minibtn" type="button" id="a-add">Agregar un botellón</button>
           <button class="minibtn" type="button" id="a-pause">Pausar</button>
           <button class="minibtn" type="button" id="a-edit">Cambiar de plan</button>
         </div>
+        <p class="mt-5 text-[.95rem] text-[var(--lichen)] min-h-[1.4em]" id="a-msg" aria-live="polite"></p>
       </div>
-      <p class="mt-5 text-[.95rem] text-[var(--lichen)] min-h-[1.4em]" id="a-msg" aria-live="polite"></p>
+      <figure class="acct-hero__photo"><img src="assets/entrega.webp" alt="Pareja recibiendo botellones retornables de Agua Siembra en la puerta de su apartamento" loading="lazy"></figure>
     </div>
 
     <div class="grid lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] gap-10 mt-12">
