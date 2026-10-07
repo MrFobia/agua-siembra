@@ -22,6 +22,7 @@ ul, ol { padding: 0; list-style: none; }
 .hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; transform: scale(1.06); transform-origin: 50% 70%; animation: hero-settle 2.4s var(--ease-out) both; }
 @keyframes hero-settle { from { transform: scale(1.14); filter: saturate(.7) brightness(.85); } }
 .hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background:
+  linear-gradient(90deg, rgba(10,38,50,.62) 0%, rgba(10,38,50,.38) 38%, rgba(10,38,50,0) 62%),
   linear-gradient(180deg, rgba(10,38,50,.55) 0%, rgba(10,38,50,0) 22%, rgba(10,38,50,0) 42%, rgba(10,38,50,.62) 72%, rgba(10,38,50,.9) 100%); }
 .hero__inner { position: relative; z-index: 2; width: 100%; }
 .hero__cut { position: absolute; left: 0; right: 0; bottom: -1px; z-index: 3; width: 100%; height: clamp(46px, 7vw, 110px); display: block; }
@@ -200,7 +201,8 @@ ul, ol { padding: 0; list-style: none; }
 <main id="top">
   <!-- ===== Hero ===== -->
   <section class="hero on-ink" aria-labelledby="hero-title">
-    <img class="hero__img" src="assets/laguna.webp" alt="Laguna rodeada de frailejones y roca en un páramo de la cordillera Oriental" fetchpriority="high">
+    <video class="hero__img" id="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.webp" aria-hidden="true"><source src="assets/hero.mp4" type="video/mp4"></video>
+    <span class="sr-only">Laguna de páramo con neblina y frailejones en la cordillera Oriental</span>
     <div class="hero__inner mx-auto max-w-[1440px] px-4 md:px-8 pb-[clamp(72px,11vw,150px)] pt-32">
       <div class="max-w-[860px]">
           <h1 id="hero-title" class="display h1">Nace a 2.900 metros.<br><span class="thin">Llega a tu puerta.</span></h1>
@@ -460,6 +462,11 @@ ul, ol { padding: 0; list-style: none; }
 document.addEventListener("DOMContentLoaded", function () {
   AS.initChrome();
   var reduced = AS.reduced();
+  var hv = document.getElementById("hero-video");
+  if (hv) {
+    if (reduced) { hv.removeAttribute("autoplay"); hv.pause(); }
+    else if ("IntersectionObserver" in window) new IntersectionObserver(function (en) { en.forEach(function (e) { if (e.isIntersecting) { var pr = hv.play(); if (pr && pr.catch) pr.catch(function () {}); } else hv.pause(); }); }).observe(hv);
+  }
   var NS = "http://www.w3.org/2000/svg";
 
   /* ---------- Buscador de zona ---------- */
